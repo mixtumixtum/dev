@@ -1,0 +1,25 @@
+{
+  "name": "mixtum",
+  "version": "0.0.1",
+  "description": "website for mixtum",
+  "scripts": {
+    "build-css": "postcss -c postcss.config.js",
+    "watch-css": "postcss -c postcss.config.js -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mixtumixtum/mixtumixtum.github.io.git"
+  },
+  "author": "yutakahoulette",
+  "bugs": {
+    "url": "https://github.com/mixtumixtum/mixtumixtum.github.io/issues"
+  },
+  "homepage": "https://mixtumixtum/mixtumixtum.github.io",
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "css-mother-starter": "0.0.21",
+    "cssnano": "^3.7.5",
+    "postcss-cli": "^2.6.0",
+    "postcss-import": "^8.1.2"
+  }
+}
