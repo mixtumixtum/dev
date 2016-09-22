@@ -3,8 +3,13 @@
   "version": "0.0.1",
   "description": "dev files for mixtum website",
   "scripts": {
-    "build-css": "postcss -c postcss.config.js",
-    "watch-css": "postcss -c postcss.config.js -w"
+    "watch-css": "postcss -c postcss.watch.js -w -l",
+    "build-css": "postcss -c postcss.build.js -l",
+    "mini-css": "postcss --use cssnano -r dist/index.css -l",
+    "watch-js": "watchify scripts/index.js -o dist/index.js -t [babelify --presets es2015] -v",
+    "build-js": "browserify scripts/index.js -o dist/index.js -t [babelify --presets es2015]",
+    "mini-js": "uglifyjs dist/index.js -c -v -m --screw-ie8",
+    "prepublish": "npm run build-css && npm run mini-css && npm run build-js && npm run mini-js"
   },
   "repository": {
     "type": "git",
@@ -16,10 +21,23 @@
   },
   "homepage": "https://mixtumixtum/dev",
   "devDependencies": {
-    "autoprefixer": "^6.4.1",
+    "autoprefixer": "6.4.1",
+    "babel-preset-es2015": "6.14.0",
+    "babelify": "7.3.0",
+    "browserify": "13.1.0",
     "css-mother-starter": "0.0.21",
-    "cssnano": "^3.7.5",
-    "postcss-cli": "^2.6.0",
-    "postcss-import": "^8.1.2"
+    "cssnano": "3.7.5",
+    "postcss-cli": "2.6.0",
+    "postcss-import": "8.1.2",
+    "uglify-js": "2.7.3",
+    "watchify": "3.7.0"
+  },
+  "dependencies": {
+    "flimflam-render": "0.1.4",
+    "flyd": "0.2.2",
+    "flyd-ajax": "0.1.0",
+    "flyd-flatmap": "1.0.2",
+    "ramda": "0.22.1",
+    "snabbdom": "0.5.3"
   }
 }
