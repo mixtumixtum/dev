@@ -5,3 +5,21 @@ body {
   background: #f3f3f3;
 }
 
+.roulette-outer {
+  height: 137px;
+  position: relative;
+  overflow: hidden;
+}
+
+.roulette-inner {
+  position: absolute;
+  transition: top 3s ease, opacity 0.3s ease;
+  -webkit-transform: translatez(0);
+  -moz-transform: translatez(0);
+  -ms-transform: translatez(0);
+  -o-transform: translatez(0);
+  transform: translatez(0);
+  opacity: 0;
+  top: 0;
+}
+

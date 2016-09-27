@@ -33,10 +33,12 @@
     "watchify": "3.7.0"
   },
   "dependencies": {
+    "array-shuffle": "^1.0.1",
     "flimflam-render": "0.1.4",
     "flyd": "0.2.2",
     "flyd-ajax": "0.1.0",
     "flyd-flatmap": "1.0.2",
+    "imagesloaded": "^4.1.1",
     "ramda": "0.22.1",
     "snabbdom": "0.5.3"
   }
