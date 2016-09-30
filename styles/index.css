@@ -1,25 +1,53 @@
 @import 'css-mother-starter';
 @import 'fonts';
 
+
 body {
   background: #f3f3f3;
 }
 
-.roulette-outer {
-  height: 137px;
-  position: relative;
-  overflow: hidden;
+.square {
+  width: 100%;
 }
 
-.roulette-inner {
-  position: absolute;
-  transition: top 3s ease, opacity 0.3s ease;
-  -webkit-transform: translatez(0);
-  -moz-transform: translatez(0);
-  -ms-transform: translatez(0);
-  -o-transform: translatez(0);
-  transform: translatez(0);
-  opacity: 0;
+.slots {
+  max-width: 411px;
+  margin: 0 auto;
+}
+
+.slot-outer {
+  position: relative;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.slots .col-4:nth-of-type(2) .slot-outer:after,
+.slots .col-4:nth-of-type(2) .slot-outer:before {
+  content: '';
+  height: 100%;
+  width: 1px;
+  z-index: 1;
   top: 0;
+  background: #f3f3f3;
+  position: absolute;
+}
+
+.slots .col-4:nth-of-type(2) .slot-outer:before {
+  left: 0;
+}
+
+.slots .col-4:nth-of-type(2) .slot-outer:after {
+  right: 0;
+}
+
+
+.slot-inner {
+  transition: margin-top 3s ease;
+  transform: translateZ(0);
+}
+
+.slot-caption {
+  opacity: 0;
+  transition: opacity .2s ease 3s;
 }
 
