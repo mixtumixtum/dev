@@ -19,6 +19,7 @@ body {
   position: relative;
   overflow: hidden;
   visibility: hidden;
+  box-sizing: content-box !important;
 }
 
 .slots .col-4:nth-of-type(2) .slot-outer:after,
@@ -42,8 +43,11 @@ body {
 
 
 .slot-inner {
+  box-sizing: content-box !important;
   transition: margin-top 3s ease;
-  transform: translateZ(0);
+}
+.slot-inner img {
+  box-sizing: content-box !important;
 }
 
 .slot-caption {
