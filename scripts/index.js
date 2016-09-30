@@ -20,14 +20,12 @@ const style = (el, styles) => R.map(s => el.style[s[0]] = s[1], styles)
 
 
 const initSlot = h => {
-  setTimeout(x => {
-    const inner = q('.slot-inner') 
-    const outer = q('.slot-outer') 
-    const caption = q('.slot-caption') 
-    R.map(x => style(x, [['visibility', 'visible'],['height', `${h}px`]]), outer)
-    R.map(x => style(x, [['margin-top', `-${h * 31}px`]]), inner)
-    R.map(x => style(x, [['opacity', 1]]), caption)
-  }, 2000)
+  const inner = q('.slot-inner') 
+  const outer = q('.slot-outer') 
+  const caption = q('.slot-caption') 
+  R.map(x => style(x, [['visibility', 'visible'],['height', `${h}px`]]), outer)
+  R.map(x => style(x, [['margin-top', `-${h * 31}px`]]), inner)
+  R.map(x => style(x, [['opacity', 1]]), caption)
 }
 
 const init = _ => {
@@ -46,7 +44,7 @@ const slot = (state, col) => {
   return h('div.col-4.inline-block'
   , [ h('div.slot-outer', [
         h('div.slot-inner'
-      , R.map(x => h('img' , {props: {src: `images/${col}/${x}.jpg`}}) , imageNames))
+      , R.map(x => h('img.block' , {props: {src: `images/${col}/${x}.jpg`}}) , imageNames))
       ])
     , h('p.slot-caption.center', R.last(imageNames)) 
   ])
