@@ -15,11 +15,13 @@ const slot = (state, key) =>
   ])
 
 module.exports = state =>
-  h('div.slots', {hook: {insert: attachImageLoaded(state.symbolsLoaded$)}}, [
-      slot(state, 'inner')
-    , slot(state, 'middle')
-    , slot(state, 'outer')
-  , h('div.center.mt2', [h('button.slot-button', {on: {click: state.clickRemix$}}, 'Remix')])
+  h('div.p1', [
+    h('div.slots', {hook: {insert: attachImageLoaded(state.symbolsLoaded$)}}, [
+        slot(state, 'inner')
+      , slot(state, 'middle')
+      , slot(state, 'outer')
+    , h('div.center.mt2', [h('button.slot-button', {on: {click: state.clickRemix$}}, 'Remix')])
+    ])
   ])
 
 

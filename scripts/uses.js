@@ -1,10 +1,9 @@
 import h from 'snabbdom/h'
 import R from 'ramda'
 import link from './link'
-import imgs from './gallery-image-names'
 
 module.exports = _ =>
-  h('div', [
+  h('div.p1', [
     h('h2.italic', 'Uses')
   , h('p', "Mixtum has many uses, including, but not limited to...")
   , h('ul', [
@@ -21,6 +20,5 @@ module.exports = _ =>
     , h('li', [link("concocting strange snacks ","https://vimeo.com/28238937")])
     , h('li', [link("improvisational dancing ","https://vimeo.com/35861980")])
     ])
-  , h('div', R.map(x => h('img', {props: {src: `./images/mixtum-${x}-400.jpg`}}), imgs))
   ])
 

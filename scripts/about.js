@@ -2,7 +2,7 @@ import h from 'snabbdom/h'
 import link from './link'
 
 module.exports = _ =>
-  h('div', [
+  h('div.p1', [
     h('h2.italic', 'About')
   , h('p', "Mixtum is a tool that selects three random symbols as prompts for creative synthesis.  Mixtum can be used by artists, writers, educators, dancers, therapists, chefs or anybody engaged in a creative process.")
   , h('p', [
@@ -15,7 +15,7 @@ module.exports = _ =>
     ])
   , h('blockquote', "...the mixtum compositum contains two elements that are far apart and strives to fuse two different worlds into one.")
   , h('img', {props: {src: './images/mixtum-board-700.jpg'}})
-  , h('p', "The first prototype of Mixtum was made by Heidi Gustafson and Yutaka Houlette while teaching together at an arts-based preschool in 2011. They soon saw that the boards could have a wider application beyond their classroom and decided to manufacture a few hundred.")
+  , h('p', "The first prototype of Mixtum was made by Heidi Gustafson and Yutaka Houlette while teaching together at an arts-based preschool in 2011. They soon saw that the boards could have a wider application beyond their classroom and decided to manufacture them.")
   ])
 
 

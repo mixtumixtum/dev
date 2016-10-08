@@ -1,12 +1,12 @@
 module.exports = [
   'simon'
 , 'bottle-music'
+, 'seahorse'
 , 'butterfly-poem'
 , 'cat-tent'
 , 'infinity-fire'
 , 'marsh-snacks'  
 , 'popcorn-action'
-, 'seahorse'
 , 'snake-blackhole'
 , 'total-freedom'
 ]

@@ -11,15 +11,21 @@ import shuffleImageNames from './shuffle-image-names'
 import slots from './slots'
 import about from './about'
 import uses from './uses'
+import gallery from './gallery'
+import brickIt from './brick-it'
 
 const init = _ => {
   const state = {}
 
   state.symbolsLoaded$ = flyd.stream()
 
+  state.galleryLoaded$ = flyd.stream()
+
   state.clickRemix$ = flyd.stream()
 
   state.imageNames$ = flyd.map(shuffleImageNames, flyd.merge(flyd.stream([]), state.clickRemix$))
+
+  flyd.map(brickIt, state.galleryLoaded$)
 
   flyd.map(animate(state), flyd.merge(state.symbolsLoaded$, state.clickRemix$))
 
@@ -27,12 +33,13 @@ const init = _ => {
 }
 
 const view = state => 
-  h('div.container.p2.o0.trans0'
+  h('div.container.o0.trans0'
   , {style: {delayed: {opacity: state.symbolsLoaded$() ? 1 : 0}}}
   , [
       slots(state) 
     , about() 
     , uses() 
+    , gallery(state)
     ]
   ) 
 
