@@ -1,15 +1,11 @@
 {
   "name": "mixtum",
   "version": "0.0.1",
-  "description": "dev files for mixtum website",
+  "description": "Mixtum website",
   "scripts": {
-    "watch-css": "postcss -c postcss.watch.js -w -l",
-    "build-css": "postcss -c postcss.build.js -l",
-    "mini-css": "postcss --use cssnano -r dist/index.css -m file -l",
-    "watch-js": "watchify scripts/index.js -o dist/index.js -t [babelify --presets es2015] -v",
-    "build-js": "browserify scripts/index.js -o dist/index.js -t [babelify --presets es2015]",
-    "mini-js": "uglifyjs dist/index.js -o dist/index.js --source-map dist/index.js.map -c -m -v",
-    "prepublish": "npm run build-css && npm run mini-css && npm run build-js && npm run mini-js"
+    "postcss": "postcss -c postcss.js -w -l",
+    "budo": "budo index.js --live -- -t babelify",
+    "build": "build.sh"
   },
   "repository": {
     "type": "git",

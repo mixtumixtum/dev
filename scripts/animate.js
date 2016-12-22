@@ -9,7 +9,7 @@ module.exports = state => _ => {
   
   R.map(x => { 
       x.classList.remove('scroll')
-      x.style.marginTop = 0 
+      x.style.transform = "translateY(0)"
     }, inner)
   R.map(x => { 
       x.classList.remove('fadeIn')
@@ -22,7 +22,7 @@ module.exports = state => _ => {
       }, caption)
     R.map(x => {
         x.classList.add('scroll')
-        x.style.marginTop = `-${h * 31}px`
+        x.style.transform = `translateY(-${h * 31}px)`
       }, inner)
 
   }, 1)

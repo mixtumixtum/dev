@@ -5,14 +5,14 @@ import flyd from 'flyd'
 import render from 'flimflam-render'
 import snabbdom from 'snabbdom'
 
-import q from './q'
-import animate from './animate'
-import shuffleImageNames from './shuffle-image-names'
-import slots from './slots'
-import about from './about'
-import uses from './uses'
-import gallery from './gallery'
-import brickIt from './brick-it'
+import q from './scripts/q'
+import animate from './scripts/animate'
+import shuffleImageNames from './scripts/shuffle-image-names'
+import slots from './scripts/slots'
+import about from './scripts/about'
+import uses from './scripts/uses'
+import gallery from './scripts/gallery'
+import brickIt from './scripts/brick-it'
 
 const init = _ => {
   const state = {}

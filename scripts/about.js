@@ -15,7 +15,13 @@ module.exports = _ =>
     ])
   , h('blockquote', "...the mixtum compositum contains two elements that are far apart and strives to fuse two different worlds into one.")
   , h('img.fullWidth', {props: {src: './images/board-700.jpg'}})
-  , h('p', "The first prototype of Mixtum was made by Heidi Gustafson and Yutaka Houlette while teaching together at an arts-based preschool in 2011. They soon saw that the boards could have a wider application beyond their classroom and decided to create a large batch of them.")
+  , h('p', [
+      "The first prototype of Mixtum was made by " 
+    , link("Heidi Gustafson", "http://earlyfutures.com")
+    , " and " 
+    , link("Yutaka Houlette", "http://yutakahoulette.com") 
+    , " while teaching together at an arts-based preschool in 2011. They soon saw that the boards could have a wider application beyond their classroom and decided to create a large batch of them."
+    ])
   ])
 
 
