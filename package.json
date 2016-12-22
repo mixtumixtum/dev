@@ -4,8 +4,7 @@
   "description": "Mixtum website",
   "scripts": {
     "postcss": "postcss -c postcss.js -w -l",
-    "budo": "budo index.js --live -- -t babelify",
-    "build": "build.sh"
+    "budo": "budo index.js --live -- -t babelify"
   },
   "repository": {
     "type": "git",

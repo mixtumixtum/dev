@@ -12,6 +12,7 @@ import slots from './scripts/slots'
 import about from './scripts/about'
 import uses from './scripts/uses'
 import gallery from './scripts/gallery'
+import contact from './scripts/contact'
 import footer from './scripts/footer'
 import border from './scripts/border'
 import brickIt from './scripts/brick-it'
@@ -36,9 +37,7 @@ const init = _ => {
 
 const view = state => 
   h('div.container' , [
-    h('div.h3.center'
-    , {class: {'hide':  state.symbolsLoaded$()}}
-    , 'Loading...')
+    state.symbolsLoaded$() ? '' : h('p.h3.center', 'Loading...')
   , h('div.o0.fadeIn'
     , {style: {delayed: {opacity: state.symbolsLoaded$() ? 1 : 0}}}
     , [
@@ -46,6 +45,7 @@ const view = state =>
       , about() 
       , uses() 
       , gallery(state)
+      , contact()
       , footer()
       , border()
       ]
