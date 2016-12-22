@@ -12,12 +12,12 @@ module.exports = state => _ => {
       x.style.transform = "translateY(0)"
     }, inner)
   R.map(x => { 
-      x.classList.remove('fadeIn')
+      x.classList.remove('fadeIn-delay')
       x.style.opacity = 0 
     }, caption)
   window.setTimeout(x => {
     R.map(x => {
-        x.classList.add('fadeIn')
+        x.classList.add('fadeIn-delay')
         x.style.opacity = 1
       }, caption)
     R.map(x => {

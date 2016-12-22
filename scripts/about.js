@@ -2,7 +2,7 @@ import h from 'snabbdom/h'
 import link from './link'
 
 module.exports = _ =>
-  h('div.p1', [
+  h('div.p2', [
     h('h2.italic', 'About')
   , h('p', "Mixtum is a tool that selects three random symbols as prompts for creative synthesis.  Mixtum can be used by artists, writers, educators, dancers, therapists, chefs or anybody engaged in a creative process.")
   , h('p', [

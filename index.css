@@ -1,9 +1,9 @@
 @import 'css-mother-starter';
 @import 'styles/fonts';
 
-
 body {
   background: #f3f3f3;
+  position: relative;
 }
 
 button {
@@ -25,20 +25,6 @@ button {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-}
-
-hr {
-  border-bottom: 1px solid rgba(0,0,0,0.3);
-  position: relative;
-}
-hr:before {
-  content: '';
-  width: 100%;
-  height: 2px;
-  background: rgba(0,0,0,0.3);
-  position: absolute;
-  left: 0;
-  top: 4px;
 }
 
 button:active {
@@ -107,8 +93,50 @@ button:disabled {
   transition: transform 3s ease;
 }
 
+.slots .scroll {
+  transform: translateZ(0);
+}
+
+.borders {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+}
+.borders img {
+  position: absolute;
+}
+.borders img:nth-of-type(1) {
+  top: 0;
+  right: 0;
+}
+.borders img:nth-of-type(2) {
+  top: 0;
+  left: 0;
+  transform: scaleX(-1);
+  filter: FlipH;
+}
+.borders img:nth-of-type(3) {
+  bottom: 0;
+  right: 0;
+  transform: scaleY(-1);
+  filter: FlipV;
+}
+.borders img:nth-of-type(4) {
+  bottom: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+
 .fadeIn {
-  transition: opacity .3s ease 3s;
+  transition: opacity .2s ease;
+}
+
+.fadeIn-delay {
+  transition: opacity .2s ease 3s;
 }
 
 blockquote {
@@ -127,6 +155,7 @@ a {
 }
 
 .spin {
+  transform: translateZ(0);
   animation-name: spin;
   animation-duration: 10s;
   animation-iteration-count: infinite;
@@ -135,6 +164,13 @@ a {
 
 .slot-caption {
   opacity: 0;
+}
+
+@media screen and (max-width: 450px) {
+  .borders img {
+    width: 150px;
+  }
+
 }
 
 

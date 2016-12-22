@@ -12,6 +12,8 @@ import slots from './scripts/slots'
 import about from './scripts/about'
 import uses from './scripts/uses'
 import gallery from './scripts/gallery'
+import footer from './scripts/footer'
+import border from './scripts/border'
 import brickIt from './scripts/brick-it'
 
 const init = _ => {
@@ -33,15 +35,22 @@ const init = _ => {
 }
 
 const view = state => 
-  h('div.container.o0.trans0'
-  , {style: {delayed: {opacity: state.symbolsLoaded$() ? 1 : 0}}}
-  , [
-      slots(state) 
-    , about() 
-    , uses() 
-    , gallery(state)
-    ]
-  ) 
+  h('div.container' , [
+    h('div.h3.center'
+    , {class: {'hide':  state.symbolsLoaded$()}}
+    , 'Loading...')
+  , h('div.o0.fadeIn'
+    , {style: {delayed: {opacity: state.symbolsLoaded$() ? 1 : 0}}}
+    , [
+        slots(state) 
+      , about() 
+      , uses() 
+      , gallery(state)
+      , footer()
+      , border()
+      ]
+    ) 
+  ])
 
 let container = document.querySelector('#container')
 
@@ -55,6 +64,3 @@ const patch = snabbdom.init([
 
 render({patch, container, view, state: init()})
 
-const getYear = _ => {let x = new Date(); return x.getFullYear()}
-
-q('#year')[0].innerHTML = getYear() 

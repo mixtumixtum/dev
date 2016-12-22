@@ -3,8 +3,8 @@ import R from 'ramda'
 import link from './link'
 
 module.exports = _ =>
-  h('div.p1', [
-    h('h2.italic', 'Uses')
+  h('div.p2', [
+    h('h2.italic.mt0', 'Uses')
   , h('p', "Mixtum has many uses, including, but not limited to...")
   , h('ul', [
       h('li',  [
