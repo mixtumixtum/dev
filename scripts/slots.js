@@ -15,7 +15,7 @@ const slot = (state, key) =>
   ])
 
 module.exports = state =>
-  h('div.p2', [
+  h('div.p1', [
     h('div.slots', {hook: {insert: attachImageLoaded(state.symbolsLoaded$)}}, [
         slot(state, 'inner')
       , slot(state, 'middle')

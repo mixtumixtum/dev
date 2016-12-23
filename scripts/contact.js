@@ -1,7 +1,7 @@
 import h from 'snabbdom/h'
 
 module.exports = () =>  
-  h('div.p2', [
+  h('div.p1', [
     h('h2.italic', 'Contact')
   , h('ul', [
       h('li', 'Heidi Gustafson - heidi{at}earlyfutures.com')
