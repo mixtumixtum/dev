@@ -7,6 +7,6 @@ module.exports = state =>
   h('div', [
     h('h2.px1.italic', 'Gallery')
   , h('div', {hook: {insert: attachImageLoaded(state.galleryLoaded$)}}, 
-      R.map(x => h('img.p1', {props: {src: `./images/${x}-400.jpg`}})
+      R.map(x => h('img.p1', {props: {src: `./images/gallery/${x}-400.jpg`}})
         , imgs))
   ])
