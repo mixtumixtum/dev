@@ -5,6 +5,6 @@ the served files (index.html, fonts, images, and the built css and js) are in a 
 ## getting started
 - `git clone https://github.com/mixtumixtum/mixtumixtum.github.io.git dist`
 - `npm install`
-- for writing css: `npm run watch-css`
-- for writing js: `npm run watch-js`
-- to build and deploy: `bash deploy.sh`
+- for watching css: `npm run postcss`
+- for watching js and running live-reload: `npm run budo`
+- to build: `npm run build`
